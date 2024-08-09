@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Francess700";
+  src: url(../font/Fraunces_144pt-Bold.ttf);
+}
+@font-face {
+  font-family: "Francess900";
+  src: url(../font/Fraunces_144pt-Black.ttf);
+}
+@font-face {
+  font-family: "barlow";
+  src: url(../font/Barlow-SemiBold.ttf);
+}
+
+$FontFrancess700: Francess700;
+$FontFrancess900: Francess900;
+$FontBarlow: barlow;
+
+// primaireeeeeeeeeeeee
+
+$OrangeRed: hsl(7, 99%, 70%);
+$Jaune: hsl(51, 100%, 49%);
+
+$Cyan: hsl(168, 34%, 41%);
+
+// second
+
+$BleuFoncee: rgb(43, 115, 101);
+$verydarkgrayish: hsl(213, 9%, 39%);
+$SombreGrisBleu: hsl(232, 10%, 55%);
+$GrisBleu: hsl(210, 4%, 67%);
+$Blanc: hsl(0, 0%, 100%);
+
+@mixin Spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body {
+  font-family: $FontBarlow;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.HamburgerClick {
+  display: block;
+  background-color: red;
+}

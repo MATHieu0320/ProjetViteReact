@@ -1,0 +1,36 @@
+footer {
+  background-color: rgb(144, 212, 197);
+  padding: 55px 0;
+  a,
+  h6 {
+    color: $BleuFoncee;
+  }
+
+  h6 {
+    color: $BleuFoncee;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .ul-1 {
+    @include Spacebetween;
+    margin: 35px auto 100px;
+    width: 18%;
+    min-width: 270px;
+    font-size: 1.2rem;
+  }
+  .ul-2 {
+    @include Spacebetween;
+    margin: 0 auto;
+    width: 10%;
+    min-width: 190px;
+  }
+  .ul-2 li {
+    font-size: 1.5rem;
+  }
+  .ul-1 li a:hover,
+  .ul-2 li a:hover {
+    transition: 0.2s ease-in;
+    color: white;
+  }
+}

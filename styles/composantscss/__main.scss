@@ -1,0 +1,169 @@
+main {
+  width: 100%;
+  .grid-1,
+  .grid-2 {
+    display: flex;
+  }
+  .grid-2 {
+    flex-direction: row-reverse;
+  }
+  .flex-Texte,
+  .flex-img {
+    position: relative;
+    width: 50%;
+  }
+  .flex-Texte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Margin {
+    width: 80%;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-family: $FontFrancess900;
+  }
+  p {
+    margin: 25px 0;
+    line-height: 32px;
+    font-family: $FontBarlow;
+    font-size: 1.1rem;
+  }
+  span a {
+    color: black;
+    text-transform: uppercase;
+    font-family: $FontFrancess900;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    position: relative;
+  }
+
+  #span2 a::after,
+  #span1 a::after {
+    content: "";
+    position: absolute;
+    background-color: $Jaune;
+    border: 5px solid $Jaune;
+    border-radius: 5px;
+    top: 60%;
+    opacity: 0.3;
+    left: -2%;
+    width: 100%;
+  }
+  #span2 a::after {
+    border: 5px solid $OrangeRed;
+    opacity: 0.4;
+  }
+  #span2 a:hover:after {
+    border: 5px solid $OrangeRed;
+    opacity: 1;
+    z-index: -1;
+  }
+  #span1 a:hover:after {
+    border: 5px solid $Jaune;
+    opacity: 1;
+    z-index: -1;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .MainTexte1,
+    .MainTexte2 {
+      padding-top: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .MainTexte1 {
+      height: 650px;
+      background: url(../../Images/desktop/image-graphic-design.jpg)
+        center/cover;
+
+      background-size: 100% 100%;
+    }
+    .MainTexte2 {
+      height: 650px;
+      background: url(../../Images/desktop/image-photography.jpg) center/cover;
+      background-size: 100% 100%;
+    }
+    h3 {
+      font-size: 1.7rem;
+      font-family: $FontFrancess900;
+      margin-bottom: 20px;
+    }
+    p {
+      width: 50%;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    .grid-3 .MainTexte2,
+    .grid-3 .MainTexte1 {
+      height: 500px;
+    }
+    .grid-3 P {
+      width: 80%;
+    }
+    @media screen and (max-width: 1000px) {
+      .grid-3 .MainTexte2,
+      .grid-3 .MainTexte1 {
+        background-size: cover;
+      }
+      h2 {
+        font-size: 2.1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .Margin {
+        width: 93%;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      .grid-1,
+      .grid-2 {
+        flex-direction: column-reverse;
+      }
+      .flex-Texte {
+        width: auto;
+        text-align: center;
+        margin: 30px 0;
+      }
+      .flex-img {
+        width: auto;
+      }
+      .grid-3 {
+        display: block;
+      }
+
+      @media screen and (max-width: 450px) {
+        .grid-3 .MainTexte1 {
+          background: url(../../Images/mobile/image-graphic-design.jpg)
+            center/cover;
+          background-size: 100% 100%;
+        }
+
+        .grid-3 .MainTexte2 {
+          background: url(../../Images/mobile/image-photography.jpg)
+            center/cover;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
